@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './Nav.css';
-
+import logo from './logo.svg';
+import './App.css';
+import './nav.css';
 class Nav extends Component {
+
     state = {
         navigation : false
     }
-
     handleClick = () => {
         this.setState({ navigation: true });
     }
@@ -13,45 +14,48 @@ class Nav extends Component {
     handleClose = () => {
         this.setState({ navigation: false });
     }
-
     render() {
         return (
+
+
             this.state.navigation ?
-                <div>
+                <div className="Navfull">
                     <nav className="top-right open">
-                        <a></a>
-                        <div>
-                            <a href="../pecfest2016" className="disc l0">
-                                <div>Pecfest 2017</div>
-                            </a>
+                        <div><a>
+                        </a></div>
+                        <div><a href="pecfest2016" className="disc l0">
+                            <div>Pecfest 2017</div>
+                        </a>
                         </div>
                         <div >
-                            <a href = "../activities" className="disc l1">
+
+                            <a href = "activities" className="disc l1">
                                 <div>Events</div>
                             </a>
+
                         </div>
                         <div>
-                            <a href = "../sponsors" className="disc l2">
+                            <a href = "sponsors" className="disc l2">
                                 <div>Sponsors</div>
                             </a>
                         </div>
                         <div>
-                            <a href = "../Team" className="disc l3">
-                                <div>Team</div>
-                            </a>
+                        <a href = "team" className="disc l3">
+                            <div>Team</div>
+                        </a>
                         </div>
                         <div>
-                            <a href = "../hospitality" className="disc l4">
-                                <div>Hospitality</div>
-                            </a>
+                        <a href = "hospitality" className="disc l4">
+                            <div>Hospitality</div>
+                        </a>
                         </div>
                         <div>
-                            <a href = "../social"  className="disc l5">
+                            <a href = "social"  className="disc l5">
                                 <div>Social</div>
                             </a>
                         </div>
-                        <div>
-                            <a href = "/"  className="disc l6">
+                        <div href = ""  className="disc l6">
+                            <a >
                                 <div>Home</div>
                             </a>
                         </div>
@@ -60,13 +64,16 @@ class Nav extends Component {
                         </a>
                     </nav>
                 </div>:
-                <div>
-                    <nav className="top-right open">
-                        <a className="disc l7 toggle" onClick={() => {this.handleClick()}}>
+                <div className="App">
+
+                    <nav className="top-right2 closed">
+
+                        <a className="disc l8 toggle" onClick={() => {this.handleClick()}}>
                             Menu
                         </a>
                     </nav>
                 </div>
+
         );
     }
 }
