@@ -11,8 +11,6 @@ body {
 nav {
     display: block;
     position: fixed;
-    width: 600px;
-    height: 600px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -23,7 +21,19 @@ nav {
     transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
     transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
 }
+nav.closed {
+    width: 150px;
+    height: 150px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+nav.top-right2 {
+    top: 30px;
+    right: 30px;
+}
 nav.open {
+    width: 600px;
+    height: 600px;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
@@ -287,7 +297,6 @@ nav.top-right {
 }
 
 .l7 {
-
     top: 240px;
     left: 240px;
     right: 240px;
@@ -316,6 +325,44 @@ nav.top-right {
     color: #ffc00e;
 }
 .open .l7.toggle {
+    -webkit-transform: rotate3d(0, 0, 1, 10deg);
+    transform: rotate3d(0, 0, 1, 10deg);
+    text-decoration: none;
+}
+
+
+
+
+
+.l8 {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: #ffc00e;
+    color:black;
+    text-decoration: none;
+    -webkit-transition-delay: 0.7s;
+    transition-delay: 0.7s;
+}
+.closed .l8 {
+    -webkit-transition-delay: 0.7s;
+    transition-delay: 0.7s;
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+    opacity: 1;
+}
+.closed .l8:hover {
+    background: black;
+    color: #ffc00e;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.closed .l8:active {
+    background: black;
+    color: #ffc00e;
+}
+.closed .l8.toggle {
     -webkit-transform: rotate3d(0, 0, 1, 10deg);
     transform: rotate3d(0, 0, 1, 10deg);
     text-decoration: none;
